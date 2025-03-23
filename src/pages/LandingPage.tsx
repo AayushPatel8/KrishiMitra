@@ -20,7 +20,7 @@ function LandingPage() {
             Connect directly with local farmers and get fresh produce delivered to your doorstep
           </p>
           <button 
-            onClick={() => navigate('/shop')}
+            onClick={() => navigate('/auth')}
             className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition"
           >
             Let's Get Started
