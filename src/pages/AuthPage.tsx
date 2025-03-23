@@ -523,7 +523,7 @@ function AuthPage() {
         <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-8">
             <Leaf className="h-8 w-8 text-green-600" />
-            <span className="text-2xl font-bold text-gray-800">FreshMart</span>
+            <span className="text-2xl font-bold text-gray-800">KrishiMitra</span>
           </div>
 
           <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">
@@ -593,7 +593,7 @@ function AuthPage() {
       <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 mb-8">
           <Leaf className="h-8 w-8 text-green-600" />
-          <span className="text-2xl font-bold text-gray-800">FreshMart</span>
+          <span className="text-2xl font-bold text-gray-800">KrishiMitra</span>
         </div>
 
         <div className="max-w-3xl w-full space-y-8 bg-white p-8 rounded-xl shadow-lg">

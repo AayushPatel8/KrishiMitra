@@ -25,6 +25,7 @@ import {
   DollarSign,
   Bot
 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../contexts/AuthContext';
 
 interface Section {
@@ -112,10 +113,10 @@ function ProfilePage() {
     {
       title: 'Money',
       items: [
-        { icon: Wallet, label: 'FreshMart Money', link: '/wallet' },
+        { icon: Wallet, label: 'KrishiMitra Money', link: '/wallet' },
         { icon: Gift, label: 'Buy Gift Card', link: '/gift-cards/buy' },
         { icon: Gift, label: 'Claim Gift Card', link: '/gift-cards/claim' },
-        { icon: CreditCard, label: 'FreshMart Credits', link: '/credits' },
+        { icon: CreditCard, label: 'KrishiMitra Credits', link: '/credits' },
         { icon: Settings, label: 'Payment Settings', link: '/payment-settings' },
       ]
     }
@@ -140,68 +141,124 @@ function ProfilePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <motion.header 
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 100 }}
+        className="bg-white shadow-sm"
+      >
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <Link to="/" className="flex items-center gap-2">
-            <Leaf className="h-6 w-6 text-green-600" />
-            <span className="text-xl font-bold text-gray-800">FreshMart</span>
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Link to="/" className="flex items-center gap-2">
+              <Leaf className="h-6 w-6 text-green-600" />
+              <span className="text-xl font-bold text-gray-800">KrishiMitra</span>
+            </Link>
+          </motion.div>
         </div>
-      </header>
+      </motion.header>
 
       <main className="max-w-3xl mx-auto px-4 py-8">
         {/* Profile Header */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="bg-white rounded-lg shadow-md p-6 mb-6"
+        >
           <div className="flex items-center gap-6">
-            <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
+            <motion.div 
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", delay: 0.4 }}
+              className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center"
+            >
               <User className="w-12 h-12 text-green-600" />
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+            >
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-gray-900">{user?.email}</h1>
                 {userType === 'farmer' && (
-                  <span className="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full">
+                  <motion.span 
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.6 }}
+                    className="px-3 py-1 bg-green-100 text-green-700 text-sm font-medium rounded-full"
+                  >
                     Farmer
-                  </span>
+                  </motion.span>
                 )}
               </div>
               <p className="text-gray-500">Member since {new Date(user?.created_at || '').toLocaleDateString()}</p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Sections */}
         <div className="space-y-6">
-          {sections.map((section) => (
-            <div key={section.title} className="bg-white rounded-lg shadow-md overflow-hidden">
+          {sections.map((section, sectionIndex) => (
+            <motion.div
+              key={section.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + sectionIndex * 0.1 }}
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+            >
               <h2 className="text-lg font-semibold p-4 border-b">{section.title}</h2>
               <div className="divide-y">
-                {section.items.map((item) => {
+                {section.items.map((item, itemIndex) => {
                   const Icon = item.icon;
                   return (
-                    <Link
+                    <motion.div
                       key={item.label}
-                      to={item.link}
-                      onClick={item.onClick}
-                      className="flex items-center justify-between p-4 hover:bg-gray-50 transition"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.4 + (sectionIndex * 0.1) + (itemIndex * 0.05) }}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
-                          <Icon className="w-5 h-5 text-gray-600" />
+                      <Link
+                        to={item.link}
+                        onClick={item.onClick}
+                        className="flex items-center justify-between p-4 hover:bg-gray-50 transition"
+                      >
+                        <div className="flex items-center gap-4">
+                          <motion.div 
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center"
+                          >
+                            <Icon className="w-5 h-5 text-gray-600" />
+                          </motion.div>
+                          <span className="text-gray-700">{item.label}</span>
+                          {item.badge && (
+                            <motion.span 
+                              initial={{ opacity: 0, scale: 0.8 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: 0.5 + (sectionIndex * 0.1) + (itemIndex * 0.05) }}
+                              className={`px-2 py-1 text-xs font-medium rounded-full ${item.badge.color}`}
+                            >
+                              {item.badge.text}
+                            </motion.span>
+                          )}
                         </div>
-                        <span className="text-gray-700">{item.label}</span>
-                        {item.badge && (
-                          <span className={`px-2 py-1 text-xs font-medium rounded-full ${item.badge.color}`}>
-                            {item.badge.text}
-                          </span>
-                        )}
-                      </div>
-                      <ChevronRight className="w-5 h-5 text-gray-400" />
-                    </Link>
+                        <motion.div
+                          whileHover={{ x: 5 }}
+                          transition={{ type: "spring", stiffness: 400 }}
+                        >
+                          <ChevronRight className="w-5 h-5 text-gray-400" />
+                        </motion.div>
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </main>
