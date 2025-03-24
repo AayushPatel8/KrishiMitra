@@ -4,7 +4,7 @@ KrishiMitra is a transparent natural farming marketplace platform that connects 
 
 ## Video Demonstration
 
-Watch the demo video here: [KrishiMitra Demo]([#](https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing)) https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing
+Watch the demo video here: [KrishiMitra Demo]([#]) https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing
 
 ## Features
 
