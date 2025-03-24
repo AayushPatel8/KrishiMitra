@@ -1,11 +1,10 @@
-cat <<EOL > README.md
 # KrishiMitra
 
 KrishiMitra is a transparent natural farming marketplace platform that connects farmers directly with consumers, ensuring fair pricing and product traceability using QR codes. It integrates Supabase for authentication and data management and uses React for the frontend.
 
 ## Video Demonstration
 
-Watch the demo video here: [KrishiMitra Demo](#) https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing
+Watch the demo video here: [KrishiMitra Demo]([#](https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing)) https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing
 
 ## Features
 
