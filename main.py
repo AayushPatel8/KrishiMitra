@@ -17,7 +17,7 @@ app.add_middleware(
 
 # Initialize Groq client
 if "GROQ_API_KEY" not in os.environ:
-    os.environ["GROQ_API_KEY"] = "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"
+    os.environ["GROQ_API_KEY"] = "API_KEY"
 
 api_key = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=api_key)
