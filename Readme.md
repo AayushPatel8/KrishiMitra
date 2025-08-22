@@ -3,11 +3,16 @@
 **KrishiMitra** is a transparent **natural farming marketplace** that connects farmers directly with consumers, ensuring **fair pricing** and **product traceability via QR codes**.  
 It integrates **Supabase** for authentication and data management, **React** for the frontend, and an **AI chatbot** for farmer and consumer support.  
 
+**Tech Stack**:
+- **Frontend**: React
+- **Backend**: Python, FastAPI  
+- **Database**: Supabase
+
 🔗 **Live Project**: [KrishiMitra](https://krishi-mitra-front.vercel.app/)  
 *(Note: Database may be disabled, so login might not work.)*  
 
 - **Frontend Deployment**: Vercel  
-- **Backend (Chatbot)**: Rander  
+- **Backend Deployment(Chatbot)**: Rander  
 - **Database**: Supabase (Backend-as-a-Service)  
 
 ---
@@ -133,4 +138,3 @@ Follow the steps below to set up **KrishiMitra** locally on your system.
 - typescript: ^5.5.3  
 - typescript-eslint: ^8.3.0  
 - vite: ^5.4.2   
-EOL
