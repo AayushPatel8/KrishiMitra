@@ -1,10 +1,30 @@
 # KrishiMitra
 
-KrishiMitra is a transparent natural farming marketplace platform that connects farmers directly with consumers, ensuring fair pricing and product traceability using QR codes. It integrates Supabase for authentication and data management and uses React for the frontend.
+**KrishiMitra** is a transparent **natural farming marketplace** that connects farmers directly with consumers, ensuring **fair pricing** and **product traceability via QR codes**.  
+It integrates **Supabase** for authentication and data management, **React** for the frontend, and an **AI chatbot** for farmer and consumer support.  
 
-## Video Demonstration
+🔗 **Live Project**: [KrishiMitra](https://krishi-mitra-front.vercel.app/)  
+*(Note: Database may be disabled, so login might not work.)*  
 
-Watch the demo video here: [KrishiMitra Demo]([#]) https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing
+- **Frontend Deployment**: Vercel  
+- **Backend (Chatbot)**: Rander  
+- **Database**: Supabase (Backend-as-a-Service)  
+
+---
+
+## 🎥 Video Demonstration  
+📌 Watch the demo here: [KrishiMitra Demo](https://drive.google.com/file/d/1atDL0Z_XFwRvYDIaNul2hjIvSG5ACCrv/view?usp=sharing)  
+
+---
+
+## 🖼️ Screenshots & Diagrams  
+Home Page:
+<img width="1907" height="871" alt="image" src="https://github.com/user-attachments/assets/3973a792-b56b-4e39-aa58-f19839b75f44" />
+Chatbot:
+<img width="1898" height="880" alt="image" src="https://github.com/user-attachments/assets/594e675c-ac10-409a-a676-605a06d3e09e" />
+Activity Diagram:
+<img width="659" height="774" alt="image" src="https://github.com/user-attachments/assets/1d960ad3-3d0d-4df6-9ce9-ab3572bb6389" />
+
 
 ## Features
 
@@ -24,7 +44,9 @@ Watch the demo video here: [KrishiMitra Demo]([#]) https://drive.google.com/file
 
 #### Farmer Login  
 - Email: farmer@gmail.com  
-- Password: 123456  
+- Password: 123456
+
+#### (You can Sign up with new credentials)
 
 ## Installation
 
@@ -34,28 +56,53 @@ Watch the demo video here: [KrishiMitra Demo]([#]) https://drive.google.com/file
 - npm or yarn  
 - Python (>= 3.8)  
 
-### Steps
+# 🚀 Installation & Setup
 
-1. Clone the repository:  
-   \`\`\`bash
-   git clone cd KrishiMitra
-   \`\`\`  
-2. Install dependencies:  
-   \`\`\`bash
-   npm install
-   \`\`\`  
-3. Configure environment variables:  
-   - Rename \`.env.example\` to \`.env\`  
-   - Add your Supabase credentials  
-4. Start the development server:  
-   \`\`\`bash
-   npm run dev
-   \`\`\`  
-5. **Run the AI Chatbot**  
-   Open a terminal and run:  
-   \`\`\`bash
-   python main.py
-   \`\`\`  
+Follow the steps below to set up **KrishiMitra** locally on your system.
+
+---
+
+## ⚙️ Prerequisites
+
+- **Node.js** (>= 16.x)
+- **npm** or **yarn**
+- **Python** (>= 3.8)
+
+---
+
+## 🔧 Steps
+
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/AayushPatel8/KrishiMitra.git
+    cd KrishiMitra
+    ```
+
+2. **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3. **Configure environment variables**
+    - Rename `.env.example` to `.env`
+    - Add your **Supabase** credentials in the `.env` file.
+
+4. **Setup AI Chatbot API key**
+    - Add your **Groq API key** in `main.py`.
+    - [Create one here if you don’t have it](https://groq.com/).
+
+5. **Run frontend (React app)**
+    ```bash
+    npm run dev
+    ```
+
+6. **Run AI Chatbot (Backend)**
+    ```bash
+    python main.py
+    ```
+
+---
+
 
 ## Dependencies
 
@@ -85,16 +132,5 @@ Watch the demo video here: [KrishiMitra Demo]([#]) https://drive.google.com/file
 - tailwindcss: ^3.4.1  
 - typescript: ^5.5.3  
 - typescript-eslint: ^8.3.0  
-- vite: ^5.4.2  
-
-
-
- 
-
-## Contribution
-
-1. Fork the repository.  
-2. Create a new branch (\`feature/new-feature\`).  
-3. Commit your changes.  
-4. Push the branch and open a Pull Request.  
+- vite: ^5.4.2   
 EOL
